@@ -27,7 +27,7 @@ main {
     display: flex;
     flex-direction: column;
     height: 100vh;
-       justify-content: center;
+    justify-content: center;
     align-items: center;
 }
 
@@ -78,6 +78,9 @@ main {
 @media (min-width: 950px) {
     .card_content {
         margin: 2rem;
+    }
+    .card_title { 
+        font-size: 2rem;
     }
 }
 
