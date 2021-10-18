@@ -6,6 +6,11 @@
     --main-text-color: hsla(0, 0%, 100%, 0.75);
     --stat-text-color: hsla(0, 0%, 100%, 0.6);
     --default-font-size: 15px;
+    box-sizing: border-box;
+}
+
+*, *:after, *:before {
+    box-sizing: inherit;
 }
 
 body {
@@ -13,6 +18,13 @@ body {
     color: var(--main-text-color);
     font-family: 'Inter';
     font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
 }
 
 .card {
@@ -21,15 +33,14 @@ body {
     display: flex;
     flex-direction: column;
     margin: 85px auto;
-    margin: 90px auto;
-    max-width: 375px;
+    width: 90%;
     overflow: hidden;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 950px) {
     .card {
         flex-direction: row-reverse;
-        max-width: 800px;
+        width: 80%;
     }
 }
 
@@ -38,11 +49,11 @@ body {
     background-color: var(--accent);
     background-image: url(./images/image-header-mobile.jpg);
     background-size: cover;
-    height: 240px;
+    height: 250px;
     width: 100%;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 950px) {
     .card_image {
         height: auto;
         width: 1000px;
@@ -51,18 +62,31 @@ body {
 
 .card_title {
     color: var(--main-heading-color);
-    font-size: 1.6rem;
+    font-size: 1.75rem;
     font-weight: 700;
-    margin-top: 40px;
+    line-height: 1.25em;
 }
 
 .accent {
     color: var(--accent);
 }
 
+@media (min-width: 950px) {
+    .card_content {
+        margin: 2rem;
+    }
+}
+
 .card_content {
-    margin: 2rem;
+    margin: 0em;
     text-align: center;
+    padding: 1.5em;
+}
+
+@media (min-width: 950px) {
+    .card_content {
+        margin: 2rem;
+    }
 }
 
 .card_text {
@@ -75,7 +99,7 @@ body {
     flex-direction: column;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 950px) {
     .stats {
         flex-direction: row;
         justify-content: space-evenly;
